@@ -1,10 +1,10 @@
 {
-    "name": "asgoodasnew/simple-data-mapper",
+    "name": "asgoodasnu/simple-data-mapper",
     "type": "symfony-bundle",
     "authors": [
         {
             "name": "Oliver Pintat",
-            "email": "oliver.pintat@asgoodasnew.com"
+            "email": "oliver.pintat@asgoodasnewasgoodasnu/simple-data-mapper.com"
         }
     ],
     "require": {
