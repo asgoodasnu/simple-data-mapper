@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="asgoodasnew_simple_data_mapper.simple_data_mapper"
+                 class="Asgoodasnew\SimpleDataMapperBundle\Collector\SimpleDataMapperCollector"
+                    public="true">
+            <argument type="service" id="asgoodasnew_simple_data_mapper.configuration_builder_collector"/>
+        </service>
+
+        <service id="Asgoodasnew\SimpleDataMapperBundle\SimpleDataMapper"
+                 alias="asgoodasnew_simple_data_mapper.simple_data_mapper"/>
+
+        <service
+                id="asgoodasnew_simple_data_mapper.configuration_builder_collector"
+                class="Asgoodasnew\SimpleDataMapperBundle\Collector\ConfigurationBuilderCollector">
+            <argument type="tagged_iterator" tag="sdm.container_builder"/>
+        </service>
+    </services>
+</container>

@@ -1,0 +1,29 @@
+{
+    "name": "oliver.pintat/simple-data-mapper-bundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Oliver Pintat",
+            "email": "oliver.pintat@asgoodasnew.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "symfony/config": "^5.0",
+        "symfony/dependency-injection": "^5.0",
+        "symfony/http-kernel": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asgoodasnew\\SimpleDataMapperBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Asgoodasnew\\SimpleDataMapperBundle\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^5.1"
+    }
+}
