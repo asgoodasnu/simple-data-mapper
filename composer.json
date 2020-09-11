@@ -4,7 +4,7 @@
     "authors": [
         {
             "name": "Oliver Pintat",
-            "email": "oliver.pintat@asgoodasnewasgoodasnu/simple-data-mapper.com"
+            "email": "oliver.pintat@asgoodasnew.com"
         }
     ],
     "require": {
@@ -24,6 +24,8 @@
         }
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^5.1"
+        "symfony/phpunit-bridge": "^5.1",
+        "phpstan/phpstan": "^0.12.42",
+        "friendsofphp/php-cs-fixer": "^2.16"
     }
 }
