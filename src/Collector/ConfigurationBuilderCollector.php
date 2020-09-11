@@ -5,12 +5,17 @@ declare(strict_types=1);
 namespace Asgoodasnew\SimpleDataMapperBundle\Collector;
 
 use Asgoodasnew\SimpleDataMapperBundle\Configuration\Configuration;
-use Asgoodasnew\SimpleDataMapperBundle\ConfigurationHandler;
 
 class ConfigurationBuilderCollector
 {
+    /** @var iterable<ConfigurationHandler> */
     private iterable $handler;
 
+    /**
+     * ConfigurationBuilderCollector constructor.
+     *
+     * @param iterable<ConfigurationHandler> $handler
+     */
     public function __construct(iterable $handler)
     {
         $this->handler = $handler;

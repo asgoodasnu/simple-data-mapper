@@ -12,7 +12,10 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
 class AsgoodasnewSimpleDataMapperExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    /**
+     * @param array<string> $configs
+     */
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $this->loadServices($container);
 
@@ -23,7 +26,7 @@ class AsgoodasnewSimpleDataMapperExtension extends Extension
     {
         $loader = new XmlFileLoader(
             $container,
-            new FileLocator(__DIR__ . '/../Resources/config')
+            new FileLocator(__DIR__.'/../Resources/config')
         );
 
         $loader->load('services.xml');
