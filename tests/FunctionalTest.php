@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Kernel;
 
 class FunctionalTest extends TestCase
 {
-    public function testServiceWiring()
+    public function testServiceWiring(): void
     {
         $kernel = new SimpleDataMapperTestingKernel('test', true);
         $kernel->boot();
@@ -30,7 +30,8 @@ class SimpleDataMapperTestingKernel extends Kernel
             new AsgoodasnewSimpleDataMapperBundle(),
         ];
     }
-    public function registerContainerConfiguration(LoaderInterface $loader)
+
+    public function registerContainerConfiguration(LoaderInterface $loader): void
     {
     }
 }

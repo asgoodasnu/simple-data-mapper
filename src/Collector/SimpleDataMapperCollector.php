@@ -13,7 +13,6 @@ class SimpleDataMapperCollector implements SimpleDataMapper
 
     public function __construct(ConfigurationBuilderCollector $configurationBuilderCollector)
     {
-
         $this->configuration = $configurationBuilderCollector->getCollectedConfiguration();
     }
 
