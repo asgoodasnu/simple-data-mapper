@@ -3,3 +3,5 @@ var
 .idea
 .phpunit.result.cache
 composer.lock
+.php_cs.cache
+coverage_html/
