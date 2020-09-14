@@ -22,6 +22,6 @@ lint-yaml:
 	@symfony php bin/console lint:yaml config/ src/ translations/ --parse-tags
 
 test-coverage:
-	@php vendor/bin/simple-phpunit -v --coverage-clover clover-coverage.xml --coverage-html coverage_html --log-junit coverage_html/junit.xml
+	@php vendor/bin/simple-phpunit -v --coverage-clover coverage_html/clover-coverage.xml --coverage-html coverage_html --log-junit coverage_html/junit.xml
 
 all: cs analyse test-coverage
