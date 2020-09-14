@@ -16,17 +16,13 @@ class SimpleDataMapperCollectorTest extends TestCase
 {
     private SimpleDataMapper $simpleDataMapper;
 
-    /** @var Loader|MockObject */
-    private $loader;
+    private MockObject $loader;
 
-    /** @var ConfigurationBuilderCollector|MockObject */
-    private $collector;
+    private MockObject $collector;
 
-    /** @var \Closure */
-    private $closure;
+    private \Closure $closure;
 
-    /** @var MockObject|Configuration */
-    private $configuration;
+    private MockObject $configuration;
 
     protected function setUp(): void
     {
