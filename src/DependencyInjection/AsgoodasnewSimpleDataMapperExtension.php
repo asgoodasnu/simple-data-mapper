@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 class AsgoodasnewSimpleDataMapperExtension extends Extension
 {
     /**
-     * @param array<string> $configs
+     * @inheritDoc
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
