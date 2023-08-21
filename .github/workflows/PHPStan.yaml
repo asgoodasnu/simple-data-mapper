@@ -27,9 +27,6 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist
 
-      - name: Install PHPUnit dependencies
-        run: vendor/bin/simple-phpunit --help
-
       - name: PHPStan
         run: |
-          vendor/bin/phpstan analyse src/ tests/ --level 7
+          composer phpstan

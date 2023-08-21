@@ -29,5 +29,15 @@
         "symfony/phpunit-bridge": "^6.3",
         "phpstan/phpstan": "^1.10.29",
         "friendsofphp/php-cs-fixer": "^v3.23.0"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit --no-coverage",
+        "coverage": "vendor/bin/phpunit -v --coverage-clover coverage_html/clover-coverage.xml --coverage-html coverage_html --log-junit coverage_html/junit.xml",
+        "phpstan": "vendor/bin/phpstan analyse src/ tests/ --level 7",
+        "cs-fixer": "PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix",
+        "test": [
+            "@phpstan",
+            "@coverage"
+        ]
     }
 }

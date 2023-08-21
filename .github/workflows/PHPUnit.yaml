@@ -14,4 +14,4 @@ jobs:
       - uses: php-actions/composer@v1
       - name: PHPUnit
         run: |
-          make test-coverage
+          composer coverage
