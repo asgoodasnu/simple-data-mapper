@@ -24,7 +24,7 @@ class FunctionalTest extends TestCase
 
 class SimpleDataMapperTestingKernel extends Kernel
 {
-    public function registerBundles()
+    public function registerBundles(): iterable
     {
         return [
             new AsgoodasnewSimpleDataMapperBundle(),

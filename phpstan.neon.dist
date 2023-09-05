@@ -1,9 +1,8 @@
 parameters:
     bootstrapFiles:
-      - vendor/bin/.phpunit/phpunit-8.3-0/vendor/autoload.php
+      - vendor/autoload.php
     excludes_analyse:
         - tests/bootstrap.php
         - src/Migrations
         - src/Tests/Behat
         - tests/Tests/Behat
-        - src/Configuration/AppConfiguration.php
