@@ -11,8 +11,8 @@
     "require": {
         "php": ">=8.2",
         "symfony/config": "^6.3|^7.4",
-        "symfony/dependency-injection": "^6.3|^7.4",
-        "symfony/http-kernel": "^6.3|^7.4"
+        "symfony/dependency-injection": "^6.3|^7.3",
+        "symfony/http-kernel": "^6.3|^7.3"
     },
     "autoload": {
         "psr-4": {
