@@ -11,7 +11,6 @@ use Asgoodasnew\SimpleDataMapperBundle\DependencyInjection\AsgoodasnewSimpleData
 use Asgoodasnew\SimpleDataMapperBundle\SimpleDataMapper;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\UsesClass;
-use PHPUnit\Framework\Attributes\UsesFunction;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
