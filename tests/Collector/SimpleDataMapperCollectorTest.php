@@ -9,9 +9,13 @@ use Asgoodasnew\SimpleDataMapperBundle\Collector\SimpleDataMapperCollector;
 use Asgoodasnew\SimpleDataMapperBundle\Configuration\Configuration;
 use Asgoodasnew\SimpleDataMapperBundle\Loader\Loader;
 use Asgoodasnew\SimpleDataMapperBundle\SimpleDataMapper;
+use PHPUnit\Framework\Attributes\AllowMockObjectsWithoutExpectations;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
+#[CoversClass(SimpleDataMapperCollector::class)]
 class SimpleDataMapperCollectorTest extends TestCase
 {
     private SimpleDataMapper $simpleDataMapper;
@@ -39,6 +43,7 @@ class SimpleDataMapperCollectorTest extends TestCase
         $this->simpleDataMapper = new SimpleDataMapperCollector($this->collector);
     }
 
+    #[AllowMockObjectsWithoutExpectations]
     public function testItThrowsAnExceptionIfNameForLoaderIsNotFound(): void
     {
         $this->configuration
@@ -51,6 +56,7 @@ class SimpleDataMapperCollectorTest extends TestCase
         $this->simpleDataMapper->map('XXX', []);
     }
 
+    #[AllowMockObjectsWithoutExpectations]
     public function testItThrowsAnExceptionIfNameForClosureIsNotFound(): void
     {
         $this->configuration
@@ -66,8 +72,8 @@ class SimpleDataMapperCollectorTest extends TestCase
     /**
      * @param array<string>        $keys
      * @param array<string, mixed> $map
-     * @dataProvider dataProvider
      */
+    #[DataProvider('dataProvider')]
     public function testItCanMap(array $keys, array $map, ?string $expected, string $key): void
     {
         $this->configuration
@@ -95,7 +101,7 @@ class SimpleDataMapperCollectorTest extends TestCase
     /**
      * @return array<mixed>
      */
-    public function dataProvider(): array
+    public static function dataProvider(): array
     {
         return [
             [['id'], ['id' => 'id'], 'id', 'id'],
