@@ -25,7 +25,7 @@ class Configuration
     public function getClosure(string $name): \Closure
     {
         if (!isset($this->mapping[$name]['closure'])) {
-            throw new \InvalidArgumentException(sprintf('No SimpleDataMapa Closure registered for name "%s"', $name));
+            throw new \InvalidArgumentException(\sprintf('No SimpleDataMapa Closure registered for name "%s"', $name));
         }
 
         return $this->mapping[$name]['closure'];
@@ -34,7 +34,7 @@ class Configuration
     public function getLoader(string $name): Loader
     {
         if (!isset($this->mapping[$name]['loader'])) {
-            throw new \InvalidArgumentException(sprintf('No SimpleDataMapperLoader registered for name "%s"', $name));
+            throw new \InvalidArgumentException(\sprintf('No SimpleDataMapperLoader registered for name "%s"', $name));
         }
 
         return $this->mapping[$name]['loader'];
