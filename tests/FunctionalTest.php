@@ -5,11 +5,19 @@ declare(strict_types=1);
 namespace Test\Asgoodasnew\SimpleDataMapperBundle;
 
 use Asgoodasnew\SimpleDataMapperBundle\AsgoodasnewSimpleDataMapperBundle;
+use Asgoodasnew\SimpleDataMapperBundle\Collector\ConfigurationBuilderCollector;
+use Asgoodasnew\SimpleDataMapperBundle\Collector\SimpleDataMapperCollector;
+use Asgoodasnew\SimpleDataMapperBundle\DependencyInjection\AsgoodasnewSimpleDataMapperExtension;
 use Asgoodasnew\SimpleDataMapperBundle\SimpleDataMapper;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Kernel;
 
+#[CoversClass(SimpleDataMapperCollector::class)]
+#[UsesClass(ConfigurationBuilderCollector::class)]
+#[UsesClass(AsgoodasnewSimpleDataMapperExtension::class)]
 class FunctionalTest extends TestCase
 {
     public function testServiceWiring(): void
