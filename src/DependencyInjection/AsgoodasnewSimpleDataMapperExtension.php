@@ -8,7 +8,7 @@ use Asgoodasnew\SimpleDataMapperBundle\Collector\ConfigurationHandler;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 class AsgoodasnewSimpleDataMapperExtension extends Extension
 {
@@ -24,12 +24,12 @@ class AsgoodasnewSimpleDataMapperExtension extends Extension
 
     private function loadServices(ContainerBuilder $container): void
     {
-        $loader = new XmlFileLoader(
+        $loader = new PhpFileLoader(
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
 
-        $loader->load('services.xml');
+        $loader->load('services.php');
     }
 
     private function autoconfigureConfigurationBuilder(ContainerBuilder $container): void

@@ -32,7 +32,9 @@ class SimpleDataMapperCollectorTest extends TestCase
     {
         $this->collector = $this->createMock(ConfigurationBuilderCollector::class);
         $this->loader = $this->createMock(Loader::class);
-        $this->closure = function () { return []; };
+        $this->closure = function () {
+            return [];
+        };
         $this->configuration = $this->createMock(Configuration::class);
 
         $this->collector
@@ -87,7 +89,9 @@ class SimpleDataMapperCollectorTest extends TestCase
             ->method('load')
             ->willReturn($map);
 
-        $this->closure = function () use ($keys) { return $keys; };
+        $this->closure = function () use ($keys) {
+            return $keys;
+        };
 
         $this->configuration
             ->expects($this->once())
