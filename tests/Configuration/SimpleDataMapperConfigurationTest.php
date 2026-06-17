@@ -25,7 +25,9 @@ class SimpleDataMapperConfigurationTest extends TestCase
     protected function setUp(): void
     {
         $this->loader = $this->createMock(Loader::class);
-        $this->closure = function () { return []; };
+        $this->closure = function () {
+            return [];
+        };
 
         $this->configuration = (new Configuration())
             ->addMapping(
